@@ -12,7 +12,6 @@ def create_app():
         description="Hedwig is a web crawler that can be used to crawl the web and extract information from websites",
         version="0.1.0",
     )
-    # explain what app_.includes() does
     init_routers(app_=app_)
     return app_
 

@@ -6,3 +6,4 @@ from .monitoring import health_check_router
 v1_router = APIRouter()
 
 v1_router.include_router(review_router, prefix="/reviews", tags=["reviews"])
+v1_router.include_router(health_check_router, prefix="/monitor", tags=["monitoring"])
