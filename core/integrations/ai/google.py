@@ -1,8 +1,9 @@
 import google.generativeai as genai
 import json
+import os   
 
 def init_client():
-    genai.configure(api_key="AIzaSyDK4RnkupX3VOUSXZOJDVZw1IQyTZHgCNw")
+    genai.configure(api_key=os.environ.get("GENAI_API_KEY"))
     model = genai.GenerativeModel("gemini-1.5-flash")
     return model
 
